@@ -4,4 +4,4 @@
 
 - name: Deploy ACM on rhacm SNO Cluster
   import_tasks: deploy_acm_sno.yml
-  when: deploy_type == 'sno-iso'
+  when: deploy_type == 'sno'
