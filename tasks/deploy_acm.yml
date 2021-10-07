@@ -22,7 +22,7 @@
     state: present
     definition: "{{ lookup('file', 'acm-operator.yaml') }}"
   register: acm_operator_success
-  retries: 5
+  retries: 20
   delay: 30
   until: acm_operator_success is not failed
 
@@ -31,6 +31,6 @@
     state: present
     definition: "{{ lookup('file', 'acm-multicluster-hub.yaml') }}"
   register: hyperconverged_success
-  retries: 5
+  retries: 20
   delay: 30
   until: hyperconverged_success is not failed
